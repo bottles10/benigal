@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+/* Wedding Photos Page Styles */
+.photos-body {
+    background-image: url('photos/photo4.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body.photos-body {
+            background: url('photos/photo4.jpg') no-repeat center center fixed; /* Set your desired background image */
+            background-size: cover; /* Make the background cover the entire page */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white; 
+        }
+  
+ 
+        .photo-gallery {
+            width: 100%;
+            height: 100vh; /* Full height of viewport */
+            overflow-y: scroll; 
+            padding: 20px;
+            box-sizing: border-box; 
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+
+        .photo {
+            margin-bottom: 20px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #f39c12; /* Button color */
+            color: #fff; /* Button text color */
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .download-btn:hover {
+            background-color: #e67e22; /* Hover effect for button */
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        
+  
+
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.photo {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.photo img {
+    width: 75%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.download-btn {
+    display: block;
+    margin-top: 5px;
+    padding: 6px 12px;
+    background-color: mintcream;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+nav {
+    margin-bottom: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: yellow;
+    font-size: 16px;
+}
+
+/* Index Page Styles */
+.index-body {
+    background: url('photos/photo1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 30px;
+    width: 80%;
+    max-width: 600px;
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+}
+
+.title-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: floatingText 3s infinite ease-in-out alternate;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    opacity: 0;
+    transform: translateY() (10px);
+    transition: opacity 2s ease-in, transform 2s ease-in;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: white;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+.btn:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+@keyframes floatingText {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
